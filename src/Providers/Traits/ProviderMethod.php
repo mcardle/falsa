@@ -1,6 +1,6 @@
 <?php
 
-namespace Mcardle\Falsa\Providers\Traits;
+namespace Falsa\Providers\Traits;
 
 trait ProviderMethod{
 

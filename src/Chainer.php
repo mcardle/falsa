@@ -1,6 +1,6 @@
 <?php
 
-namespace Mcardle\Falsa;
+namespace Falsa;
 
 class Chainer{
 
@@ -15,7 +15,7 @@ class Chainer{
 
 		for($i=0; $i<$this->build['runs']; $i++){
 			$this->build['current_run'] = $i;
-			$class = '\Mcardle\Falsa\\'.$name;
+			$class = '\Falsa\\'.$name;
 
 			if(class_exists($class, true)){
 				$provider = new $class($args, $this->locale, $this->build);

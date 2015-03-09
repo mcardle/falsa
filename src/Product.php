@@ -1,11 +1,11 @@
 <?php
 
-namespace Mcardle\Falsa;
-use Mcardle\Falsa\Providers\Interfaces\ProviderMethodInterface;
+namespace Falsa;
+use Falsa\Providers\Interfaces\ProviderMethodInterface;
 
 class Product implements ProviderMethodInterface{
 
-	use \Mcardle\Falsa\Providers\Traits\ProviderMethod;
+	use \Falsa\Providers\Traits\ProviderMethod;
 
 	protected $products = [];
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Mcardle\Falsa;
+namespace Falsa;
 
 class Factory{
 	
@@ -17,10 +17,10 @@ class Factory{
     	}
 
         if($type === 'chain'){
-            $class = '\Mcardle\Falsa\Chainer';
+            $class = '\Falsa\Chainer';
         }
         else{
-            $class = '\Mcardle\Falsa\\'.$type;
+            $class = '\Falsa\\'.$type;
         }
 
     	

@@ -19,7 +19,7 @@
 	},
 	"autoload": {
         "psr-4": {
-            "Mcardle\\Falsa\\": "src/"
+            "Falsa\\": "src/"
         }
     },
 	"require-dev": {

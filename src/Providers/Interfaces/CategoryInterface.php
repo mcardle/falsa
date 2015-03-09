@@ -1,6 +1,6 @@
 <?php
 
-namespace Mcardle\Falsa\Providers\Interfaces;
+namespace Falsa\Providers\Interfaces;
 
 interface CategoryInterface{
 	
