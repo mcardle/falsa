@@ -11,7 +11,7 @@ return [
 		'Lenovo ThinkCentre E73 10AW',
 		'ASUS ROG G20AJ NR036S'
 	],
-	'labtops' => [
+	'laptops' => [
 		'Dell Inspiron 15 3542',
 		'ASUS K551LN 15.6" Notebook',
 		'Packard Bell Easy Note',

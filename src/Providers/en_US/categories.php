@@ -2,7 +2,7 @@
 
 return [
 	'computers',
-	'labtops',
+	'laptops',
 	'phones',
 	'pcs',
 	'radios',

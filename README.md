@@ -16,7 +16,7 @@ Now you can do something like:
 
 `$chain->loop(6)->category()->product()->exec();`
 
-Let break it down. 
+Let's break it down. 
 
 **loop(int $x = 1)**: Takes one parameter and it's the number of times it should run.
 
