@@ -11,21 +11,15 @@ class Factory{
     static public function create($type, $locale = self::DEFAULT_LOCALE){
 
     	self::setAvailableLocales();
+    	if(!self::checkLocale($locale)){ die('Locale unknown');	}
 
-    	if(!self::checkLocale($locale)){
-    		die('Locale unknown');
-    	}
+        $class = ($type === 'chain') ? '\Falsa\Chainer' : '\Falsa\\'.$type;
 
-        if($type === 'chain'){
-            $class = '\Falsa\Chainer';
-        }
-        else{
-            $class = '\Falsa\\'.$type;
-        }
-
-    	
-    	if(class_exists($class, true)){
-    		$instance = new $class($locale);
+    	if(class_exists($class, true)){ // Class exists using autoload
+    		$instance = ($type === 'chain') ? new $class($locale) : new $class([], $locale);
+            if($type !== 'chain'){
+                $instance->init($locale);
+            }
             return $instance->generate();
     	}
     	else{
@@ -37,12 +31,21 @@ class Factory{
     	return in_array($locale, self::$availableLocales);
     }
 
+    static private function validateLocale($locale){
+        if(preg_match("/^[a-z]{2}_[A-Z]{2}$/", $locale)){
+            return $locale;
+        }
+        return false;
+    }
+
     static private function setAvailableLocales(){
 
     	foreach(glob(__DIR__.'/Providers/*') as $folder){
     		if(is_dir($folder)){
     			$folderChunks = explode('/', $folder);
-    			self::$availableLocales[] = end($folderChunks);
+                if($locale = self::validateLocale(end($folderChunks))){
+    			     self::$availableLocales[] = $locale;
+                }
     		}
     	}
     }

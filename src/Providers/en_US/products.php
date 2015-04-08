@@ -1,33 +1,45 @@
 <?php
 
 return [
-	'computers' => [
-		'Dell Precision Workstation T3600',
-		'Lenovo ThinkCentre M93p 10AB',
-		'DCS Trend PC Home',
-		'Dell OptiPlex 3030',
-		'HP ProOne 400 G1',
-		'HP Pro 3500 G2',
-		'Lenovo ThinkCentre E73 10AW',
-		'ASUS ROG G20AJ NR036S'
-	],
-	'laptops' => [
-		'Dell Inspiron 15 3542',
+
+
+	// COMPUTERS
+	'asus' => [
 		'ASUS K551LN 15.6" Notebook',
-		'Packard Bell Easy Note',
 		'ASUS ROG G551JM CN060H',
 		'ASUS X200MA',
-		'HP Split x2 13-m200eo',
-		'Lenovo B50-70 80EU',
-		'ASUS N550JK DS501H'
+		'ASUS N550JK DS501H',
+		'ASUS ROG G20AJ NR036S'
 	],
-	'phones' => [
-		'Alcatel OneTouch 2005',
-		'Alcatel OneTouch 2007DC',
-		'Alcatel OneTouch 2007 GR',
-		'Alcatel OneTouch Idol 2',
-		'Alcatel OneTouch Idol Ultra',
-		'Alcatel OneTouch Idol Alpha',
+	'dell' => [
+		'Dell Inspiron 15 3542',
+		'Dell Precision Workstation T3600',
+		'Dell OptiPlex 3030'
+	],
+	'packard bell' => [
+		'Packard Bell Easy Note'
+	],
+	'lenovo' => [
+		'Lenovo B50-70 80EU',
+		'Lenovo ThinkCentre M93p 10AB',
+		'Lenovo ThinkCentre E73 10AW'
+	],
+	'hp' => [
+		'HP Split x2 13-m200eo',
+		'HP ProOne 400 G1',
+		'HP Pro 3500 G2'
+	],
+
+
+	// PHONES
+	'samsung' => [
+		'Samsung Galaxy S2',
+		'Samsung Galaxy S3',
+		'Samsung Galaxy S4',
+		'Samsung Galaxy S5',
+		'Samsung Galaxy S6',
+	],
+	'apple' => [
 		'iPhone 4 8 GB',
 		'iPhone 5C 8 GB',
 		'iPhone 5 16GB',
@@ -37,16 +49,6 @@ return [
 		'iPhone 6 64 GB',
 		'iPhone 6 128 GB',
 		'iPhone 6 Plus 64 GB',
-		'iPhone 6 Plus 128 GB',
-		'Cat B100',
-		'Cat B15Q',
-		'Cat S50',
-		'Doro PhoneEasy 507',
-		'Doro PhoneEasy 507S',
-		'Doro PhoneEasy 516',
-		'Doro PhoneEasy 520X',
-		'Doro PhoneEasy 608',
-		'Doro Liberto 650',
-		'Doro PhoneEasy 622'
+		'iPhone 6 Plus 128 GB'
 	]
 ];

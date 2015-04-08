@@ -13,30 +13,32 @@ class Product implements ProviderMethodInterface{
 		$this->products = require(__DIR__.'/Providers/'.$locale.'/products.php');
 	}
 
-	public function generate(){
+	public function generate($args = []){
+		$this->args = $args;
+		$index = !empty($args[0]) ? strtolower($args[0]) : '';
 
-		$category = !empty($this->build['category']) ? strtolower($this->build['category'][$this->build['current_run']]) : '';
-
-		if(!empty($this->build['category']) && array_key_exists($category, $this->products)){
-			$values = $this->products[$category];
-		}
-		elseif(!empty($this->build['category']) && !array_key_exists($category, $this->products)){
-			die('The category: '.ucfirst($category).' was not found!');
-		}
-		else{
-			$keys = array_keys($this->products);
-			for($i=0; $i<10; $i++){
-				shuffle($keys);
+		if(empty($index)){
+			if(!empty($this->build['brand'][$this->build['current_run']])){
+				$index = strtolower($this->build['brand'][$this->build['current_run']]);
 			}
-			$key = $keys[0];
-			$values = $this->products[$key];
+			else{
+				$keys = array_keys($this->products);
+				for($i=0; $i<10; $i++){
+					shuffle($keys);
+				}
+				$index = $keys[0];
+			}
 		}
+
+		//echo '<pre>'.print_r($this->build['category'], true); die();
+		$values = $this->products[$index];
 
 		for($i=0; $i<10; $i++){
 			shuffle($values);
 		}
 
-		return $values[0];
+		$product = ucwords($values[0]);
+		return $product;
 	}
 
 }
