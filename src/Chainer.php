@@ -39,9 +39,17 @@ class Chainer{
 		return $this;
 	}
 
-	public function exec(){
-		echo '<pre>';
-		print_r($this->build);
+	public function debug($die = false){
+		echo '<pre>'.print_r($this->build, true).'</pre>';
+		if($die){
+			die();
+		}
 	}
-	
+
+	public function execute(){
+		// Strips current run
+
+		unset($this->build['current_run']);
+		return $this->build;
+	}
 }
