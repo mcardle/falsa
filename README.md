@@ -10,31 +10,35 @@ There are two ways to use Falsa. One is to create a chain of events that depends
 
 To create a chain, simply use: 
 
-`$chain = Falsa\Factory::create('chain');`
+```php
+$chain = Falsa\Factory::create('chain');
+```
 
 If more languages is created in the Providers folder, you can set the locale as the second parameter in the Factory::create() method.
 
 Now you can do something like:
 
-`$chain->loop(6)->category()->brand()->product()->execute();`
+```php
+$chain->loop(6)->category()->brand()->product()->execute();
+```
 
 Let's break it down. 
 
-**loop(int $x = 1)**: Takes one parameter and it's the number of times it should run.
+`loop(int $x = 1)`: Takes one parameter and it's the number of times it should run.
 
-**category([string $name = ''])**: Takes none or one parameter, which is the category as a string.
+`category([string $name = ''])`: Takes none or one parameter, which is the category as a string.
 
-[See all available categories](CURRENT_CATEGORIES.md)
+[See all available categories](https://github.com/mcardle/falsa/wiki/Available-categories)
 
-**brand([string $name = ''])**: Takes none or one parameter, which is the brand of the product you are trying to create.
+`brand([string $name = ''])`: Takes none or one parameter, which is the brand of the product you are trying to create.
 
-[See all available brands](CURRENT_BRANDS.md)
+[See all available brands](https://github.com/mcardle/falsa/wiki/Available-brands)
 
-**product()**: Takes none parameters. If a brand was provided all the products created will be of that brand. If the brand was random selected, the product will match the random brand the number of times you set it to loop. If a brand is not set, but a category is, either by specifying or random, the product will match a random brand from that category.
+`product()`: Takes none parameters. If a brand was provided all the products created will be of that brand. If the brand was random selected, the product will match the random brand the number of times you set it to loop. If a brand is not set, but a category is, either by specifying or random, the product will match a random brand from that category.
 
-[See all available products](CURRENT_PRODUCTS.md)
+[See all available products](https://github.com/mcardle/falsa/wiki/Available-products)
 
-**execute()**: This is the last method called in a chain and is used to stop and execute all the data in the chain. 
+`execute()`: This is the last method called in a chain and is used to stop and execute all the data in the chain. 
 
 The chain will return a multidimensional array with a dataset to create your products.
 
