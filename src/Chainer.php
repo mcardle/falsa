@@ -39,17 +39,35 @@ class Chainer{
 		return $this;
 	}
 
-	public function debug($die = false){
+	public function debug($die = false, $clean = true){
+		if($clean){
+			$this->clean();
+		}
 		echo '<pre>'.print_r($this->build, true).'</pre>';
 		if($die){
 			die();
 		}
 	}
 
-	public function execute(){
-		// Strips current run
+	private function clean(){
+		if(
+			!empty($this->build['category']) && 
+			!empty($this->build['brand']) && 
+			count($this->build['category']) === count($this->build['brand'])
+		){
+			for($i=0; $i<count($this->build['category']); $i++){
+				$this->build['brand'][$i] = str_replace(' '.$this->build['category'][$i], '', $this->build['brand'][$i]);
+			}
+		}
+	}
 
+	public function execute($clean = true){
+		// Strips current run
 		unset($this->build['current_run']);
+
+		if($clean){
+			$this->clean();
+		}
 		return $this->build;
 	}
 }

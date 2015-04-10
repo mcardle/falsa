@@ -1,5 +1,7 @@
 # Falsa
 
+# DOCS ARE NOT UP2DATE - BUT THE CODE WORKS JUST FINE - VIEW CODE FOR DOCUMENTATION - WILL BE UPDATED SHORTLY
+
 Falsa is a faker utility in PHP for creating dummy products and categories for webshops. 
 
 Inspired by [fzaninotto/Faker](https://github.com/fzaninotto/Faker)

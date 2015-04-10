@@ -2,5 +2,6 @@
 
 return [
 	'computers',
-	'phones'
+	'phones',
+	'tablets'
 ];

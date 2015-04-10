@@ -2,14 +2,18 @@
 
 return [
 	'phones' => [
-		'samsung',
-		'apple'
+		'samsung phones',
+		'apple phones'
 	],
 	'computers' => [
-		'asus',
-		'dell',
-		'packard bell',
-		'lenovo',
-		'hp'
+		'asus computers',
+		'dell computers',
+		'packard bell computers',
+		'lenovo computers',
+		'hp computers',
+		'apple computers'
+	],
+	'tablets' => [
+		'apple tablets'
 	]
 ];
