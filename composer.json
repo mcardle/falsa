@@ -1,28 +1,24 @@
 {
-	"name": "mcardle/falsa",
-	"description": "A fake product creation service",
-	"version": "1.0.0",
-	"type": "library",
-	"keywords": ["faker","php5.3","falsa","fake","products"],
-	"time": "2015-02-27",
-	"license": "MIT",
-	"authors": [
+    "name": "keystroke/falsa",
+    "description": "Fake category, brand and product creation for webshops",
+    "license": "MIT",
+    "keywords": ["Laravel", "Fake", "Webshop", "Products", "Categories", "Brands"],
+    "authors": [
         {
             "name": "Ulrik McArdle",
-            "email": "mcardle@keystroke.dk",
-            "homepage": "http://keystroke.dk",
-            "role": "Lead Developer"
+            "email": "mcardle@keystroke.dk"
         }
     ],
-	"require": {
-		"php": ">=5.4"
-	},
-	"autoload": {
+    "minimum-stability": "dev",
+    "require": {
+        "illuminate/support": "^5.9@dev"
+    },
+    "autoload": {
         "psr-4": {
-            "Falsa\\": "src/"
+            "Keystroke\\Falsa\\": "src/"
         }
     },
-	"require-dev": {
-		"phpunit/phpunit": "~4.5"
-	}
+    "require-dev": {
+        "phpunit/phpunit": "^8.1@dev"
+    }
 }
